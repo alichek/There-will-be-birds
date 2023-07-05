@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>BirdwatchingProjBuild</title>
+    <title>Alec Gitelman Lede Project 1 - Watching the Bird Watchers</title>
   </head>
   <body>
     <h1>Watching the Bird Watchers</h1>
@@ -14,7 +14,7 @@
     </p>   
     <p>   The API did allow me to ask for daily statistics for any US State, returning the number of submissions, individuals filing submissions and bird species sighted. I decided to combine the sightings for three states: New York, New Jersey and Connecticut. I reasoned that while the state of New York is geographically large, New Jersey and Connecticut are somewhat more compact and close to New York City. The combined population of the three states is about 31 million, while the Tri-State metropolitan area by different estimates contains between 20 and 23 million inhabitants. And although a large number of bird sightings happen in people’s backyards, birders do travel quite a bit locally for their hobby. 
     </p>   
-    <p>   So I believe the combined statistics for the three states should provide a reasonable reflection of what happens in and around New York City, including the effect of local weather phenomena. 
+    <p>   So while an imperfect substitute, for the purpose of this exercise I believe the combined statistics for the three states should provide a reasonable reflection of what happens in and around New York City, including the effect of local weather phenomena. 
     </p>   
     <p>   I started by looking at the submissions for the past three months. Noticing that the patterns in the number of contributors closely followed the number submissions, I decided to focus only on the number of submissions.
         </p>
@@ -22,11 +22,28 @@
     </script>
     <p> First thing that stood out was one day in May, where observations spiked. There was something special about May 13th. And yes, there was. It was, what eBird called Big Day, a celebration of the semiannual World Migratory Bird Day when their users are encouraged to go out and fill out a few extra submissions. What’s remarkable though, is that the number of different species spotted does not largely depend on the number of birders out that day, or submissions to the database. On the Big Day more than twice as many submissions were made as on the next highest submissions day, 8,951 versus 4,454, but only 25 more species were spotted - 521 vs 506. 
     </p>
-    <p> In general, the number of species stays relatively flat despite the spikes in observations. I noticed a definite pattern in the number of submissions, fluctuations defined by seven day intervals. I averaged the number of submissions on each day of the week. 
+    <p> In general, the number of species stays relatively flat despite the spikes in observations. I noticed a definite pattern in the number of submissions, fluctuations defined by seven day intervals. After removing a few days to make the number of weekdays even, I averaged the number of submissions on each day of the week. 
     </p>
     <iframe title="Hump Day Is Not For The Birds" aria-label="Column Chart" id="datawrapper-chart-NLKXg" src="https://datawrapper.dwcdn.net/NLKXg/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
     </script>
     <p> I imagine that birds do not have to report to their bosses, submit timecards and abide by deadlines, but many bird watchers definitely do. Wednesdays are the inverted hump days for the birdwatching community.
     </p>
+    <p>What else do birders have to contend with? How about the weather?
+    </p>
+    <p> While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely either bring down the mood of bird watchers or force the birds to hide really well.
+        This is where my analysis gets really shaky, because I can only get the weather for one location. But let’s assume that the population of the Tri-State area should have a sizable effect on the statistics for the three states combined. I used weatherapi.com to check the weather for New York, and averaged across the descriptive conditions for those days.
+    </p>        
+    <iframe title="Yeah, Nobody Likes Rainy Days" aria-label="Stacked Bars" id="datawrapper-chart-mab9u" src="https://datawrapper.dwcdn.net/mab9u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="433" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script><p> While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely either bring down the mood of bird watchers or force the birds to hide really well.
+    </p>
+    <p>There was a rather new phenomenon we had to contend with recently in New York, bad air days due to Canadian wildfires. Unfortunately, weatherapi.com does not provide historical air quality data, however I was able to find it at the <a href="https://aqicn.org/historical#!city:usa/newyork">World Air Quality Historical Database</a>.
+    </p>
+    <iframe title="Air Quality in New York City" aria-label="Interactive line chart" id="datawrapper-chart-5tLgj" src="https://datawrapper.dwcdn.net/5tLgj/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
+    <p>Thankfully, there were only a few patches of bad air quality days in New York recently, but the drop in bird sighting submissions was noticeable. The numbers for bad days compared to similar days the weeks before or after were 10-20 percent lower. With only a few bad air quality days in recent memory, there is not enough data to go by, but it’s fair to guess that if we continue to suffer from bad air days in New York, the bird watching hobby will suffer along with other outdoor activities, and citizen science with it.
+    </p>
+    <p>One last thing I wanted to look at was the effect of Covid lockdown on eBird.org submissions. To do that I needed to ask the API over a thousand times to give me daily statistics for one state (I chose New York). In case I would get denied API access for overtaxing the servers, I left it for last. 
+    </p>
+
   </body>
 </html>
