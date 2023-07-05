@@ -3,6 +3,28 @@
     <title>BirdwatchingProjBuild</title>
   </head>
   <body>
-    <h1>Here will be birds</h1>
+    <h1>Watching the Bird Watchers</h1>
+    <p>Some people like to watch birds. Some others like birdwatching. And some use their bird watching hobby to help science.
+    </p>
+    <p>   Managed by the Cornell Lab of Ornithology, the website eBird.org collects information about bird sightings from millions of birdwatchers around the world. The website provides birders with standardized checklists, as well as tools to manage their lists, photos and video recordings. In return, these bird enthusiasts become citizen scientists, helping the eBird team build an invaluable collection of bird sighting data. Over the years this data was used in hundreds of research and conservation projects.
+    </p>   
+    <p>   And while birds do whatever it is that birds do, I wondered if there are patterns in birdwatcher behavior that I could observe. Birds, as far as I know, don’t care whether there is someone observing them through a pair of binoculars, or documenting their behavior. If a bird flaps its wings in the proverbial forest, with no birdwatcher in sight, eBird will never know. So what can we know about the birdwatchers?
+    </p>  
+    <p>   I started by wanting to look at the data for the city of New York. And while the eBird API provides a number of ways to pull the observation data, it has its limitations. I could not easily get what I wanted - how many bird sighting checklists were submitted each day in the city of New York. I had to find a turnaround. 
+    </p>   
+    <p>   The API did allow me to ask for daily statistics for any US State, returning the number of submissions, individuals filing submissions and bird species sighted. I decided to combine the sightings for three states: New York, New Jersey and Connecticut. I reasoned that while the state of New York is geographically large, New Jersey and Connecticut are somewhat more compact and close to New York City. The combined population of the three states is about 31 million, while the Tri-State metropolitan area by different estimates contains between 20 and 23 million inhabitants. And although a large number of bird sightings happen in people’s backyards, birders do travel quite a bit locally for their hobby. 
+    </p>   
+    <p>   So I believe the combined statistics for the three states should provide a reasonable reflection of what happens in and around New York City, including the effect of local weather phenomena. 
+    </p>   
+    <p>   I started by looking at the submissions for the past three months. Noticing that the patterns in the number of contributors closely followed the number submissions, I decided to focus only on the number of submissions.
+        </p>
+    <iframe title="Daily Submitted Bird Sighting Checklists" aria-label="Column Chart" id="datawrapper-chart-bCEV7" src="https://datawrapper.dwcdn.net/bCEV7/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
+    <p>First thing that stood out was one day in May, where observations spiked. There was something special about May 13th. And yes, there was. It was, what eBird called Big Day, a celebration of the semiannual World Migratory Bird Day when their users are encouraged to go out and fill out a few extra submissions. What’s remarkable though, is that the number of different species spotted does not largely depend on the number of birders out that day, or submissions to the database. On the Big Day more than twice as many submissions were made as on the next highest submissions day, 8,951 versus 4,454, but only 25 more species were spotted - 521 vs 506. 
+    </p>
+    <p>In general, the number of species stays relatively flat despite the spikes in observations. I noticed a definite pattern in the number of submissions, fluctuations defined by seven day intervals. I averaged the number of submissions on each day of the week. 
+    </p>
+    <iframe title="Hump Day Is Not For The Birds" aria-label="Column Chart" id="datawrapper-chart-NLKXg" src="https://datawrapper.dwcdn.net/NLKXg/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
   </body>
 </html>
