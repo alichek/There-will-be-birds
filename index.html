@@ -1,81 +1,156 @@
 <!doctype html>
 <html lang="en">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
-
-<style>
-  .text-container {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .text-container img {
-    max-width: 100%;
-  }
-  .byline {
-    font-size: 12px;
-    color: #632fff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  h1 {
-    font-size: xx-large;
-    background-color: aquamarine;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-
-</style>
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alec Gitelman Lede Project 1 - Watching the Bird Watchers</title>
+
 </head>
-  <body>
-  <div class='text-container'>
-    <h1>Watching the Bird Watchers</h1>
-    <p class="byline">By Alec Gitelman.</p>
-    <p>Some people like to look at the birds. Some others take looking at birds seriously and call it birdwatching. And yet some others use their bird watching hobby to help science.
-    </p>
-    <p>   Managed by the Cornell Lab of Ornithology, the website eBird.org collects information about bird sightings from millions of birdwatchers around the world. The website provides birders with standardized checklists, as well as tools to manage their lists, photos and video recordings. In return, these bird enthusiasts become citizen scientists, helping the eBird team build an invaluable collection of bird sighting data. Over the years this data was used in hundreds of research and conservation projects.
-    </p>   
-    <p>   And while birds do whatever it is that birds do, I wondered if there are patterns in birdwatcher behavior that I could observe. Birds, as far as I know, don’t care whether there is someone observing them through a pair of binoculars, or documenting their behavior. If a bird flaps its wings in the proverbial forest, with no birdwatcher in sight, eBird will never know. So what can we know about the birdwatchers?
-    </p>  
-    <p>   I started by wanting to look at the data for the city of New York. And while the eBird API provides a number of ways to pull the observation data, it has its limitations. I could not easily get what I wanted - how many bird sighting checklists were submitted each day in the city of New York. I had to find a turnaround. 
-    </p>   
-    <p>   The API did allow me to ask for daily statistics for any US State, returning the number of submissions, individuals filing submissions and bird species sighted. I decided to combine the sightings for three states: New York, New Jersey and Connecticut. I reasoned that while the state of New York is geographically large, New Jersey and Connecticut are somewhat more compact and close to New York City. The combined population of the three states is about 31 million, while the Tri-State metropolitan area by different estimates contains between 20 and 23 million inhabitants. And although a large number of bird sightings happen in people’s backyards, birders do travel quite a bit locally for their hobby. 
-    </p>   
-    <p>   So while an imperfect substitute, for the purpose of this exercise I believe the combined statistics for the three states should provide a reasonable reflection of what happens in and around New York City, including the effect of local weather phenomena. 
-    </p>   
-    <p>   I started by looking at the submissions for the past three months. Noticing that the patterns in the number of contributors closely followed the number submissions, I decided to focus only on the number of submissions.
-        </p>
-    <iframe title="Daily Submitted Bird Sighting Checklists" aria-label="Column Chart" id="datawrapper-chart-bCEV7" src="https://datawrapper.dwcdn.net/bCEV7/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
-    <p> First thing that stood out was one day in May, where observations spiked. There was something special about May 13th. And yes, there was. It was, what eBird called Big Day, a celebration of the semiannual World Migratory Bird Day when their users are encouraged to go out and fill out a few extra submissions. What’s remarkable though, is that the number of different species spotted does not largely depend on the number of birders out that day, or submissions to the database. On the Big Day more than twice as many submissions were made as on the next highest submissions day, 8,951 versus 4,454, but only 25 more species were spotted - 521 vs 506. 
-    </p>
-    <p> In general, the number of species stays relatively flat despite the spikes in observations. I noticed a definite pattern in the number of submissions, fluctuations defined by seven day intervals. After removing a few days to make the number of weekdays even, I averaged the number of submissions on each day of the week. 
-    </p>
-    <iframe title="Hump Day Is Not For The Birds" aria-label="Column Chart" id="datawrapper-chart-NLKXg" src="https://datawrapper.dwcdn.net/NLKXg/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
-    <p> I imagine that birds do not have to report to their bosses, submit timecards and abide by deadlines, but many bird watchers definitely do. Wednesdays are the inverted hump days for the birdwatching community.
-    </p>
-    <p>What else do birders have to contend with? How about the weather?
-    </p>
-    <p> While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely either bring down the mood of bird watchers or force the birds to hide really well.
-        This is where my analysis gets really shaky, because I can only get the weather for one location. But let’s assume that the population of the Tri-State area should have a sizable effect on the statistics for the three states combined. I used weatherapi.com to check the weather for New York, and averaged across the descriptive conditions for those days.
-    </p>        
-    <iframe title="Yeah, Nobody Likes Rainy Days" aria-label="Stacked Bars" id="datawrapper-chart-mab9u" src="https://datawrapper.dwcdn.net/mab9u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="433" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script><p> While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely either bring down the mood of bird watchers or force the birds to hide really well.
-    </p>
-    <p>There was a rather new phenomenon we had to contend with recently in New York, bad air days due to Canadian wildfires. Unfortunately, weatherapi.com does not provide historical air quality data, however I was able to find it at the <a href="https://aqicn.org/historical#!city:usa/newyork">World Air Quality Historical Database</a>.
-    </p>
-    <iframe title="Air Quality in New York City" aria-label="Interactive line chart" id="datawrapper-chart-5tLgj" src="https://datawrapper.dwcdn.net/5tLgj/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
-    <p>Thankfully, there were only a few patches of bad air quality days in New York recently, but the drop in bird sighting submissions was noticeable. The numbers for bad days compared to similar days the weeks before or after were 10-20 percent lower. With only a few bad air quality days in recent memory, there is not enough data to go by, but it’s fair to guess that if we continue to suffer from bad air days in New York, the bird watching hobby will suffer along with other outdoor activities, and citizen science with it.
-    </p>
-    <p>One last thing I wanted to look at was the effect of Covid lockdown on eBird.org submissions. To do that I needed to ask the API over a thousand times to give me daily statistics for one state (I chose New York). In case I would get denied API access for overtaxing the servers, I left it for last. 
-    </p>
-    <iframe title="Effects of Covid on Bird Watching" aria-label="Interactive line chart" id="datawrapper-chart-rzhma" src="https://datawrapper.dwcdn.net/rzhma/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
-    <p>It appears that starting in the spring of 2020, eBird.org started receiving a large number of submissions from more participants. What’s interesting is that those numbers have not dropped as COVID lockdowns ended. Birdwatching, it seems, is an enduring hobby.
-    </p>
+
+<style>
+  h1 {
+    font-size: xx-large;
+    font-family: 'Agdasima', sans-serif;
+    }
+</style>
+
+<body>
+
+  <div class="container is-widescreen">
+    <div class="">
+      <div class="has-background-success-light">
+        <div class="has-text-black-bis">
+          <div class="is-family-sans-serif content">
+            <h1 class="title is-1 has-background-link has-text-white-ter my-5">&nbspWatching the Bird Watchers</h1>
+            <h2 class="subtitle is-5 has-text-link-dark mb-6"><em>&nbsp &nbsp By Alec Gitelman.</em><h2>
+                <div class="block my-3">
+                  <p class="my-3">Some people like to look at the birds. Some others take looking at birds seriously and call it birdwatching. And
+                    yet some others use their bird watching hobby to help science.
+                  </p>
+                  <p class="my-3">Managed by the Cornell Lab of Ornithology, the <a href=ebird.org>eBird</a> project collects information about bird sightings from
+                    millions of birdwatchers around the world. The website provides birders with standardized checklists, as well as
+                    tools to manage their lists, photos and video recordings. In return, these bird enthusiasts become citizen
+                    scientists, helping the eBird team build an invaluable collection of bird sighting data. Over the years this data
+                    was used in hundreds of research and conservation projects.
+                  </p>
+                  <p class="my-3">And while birds do whatever it is that birds do, I wondered if there are patterns in birdwatcher behavior that I
+                    could observe. Birds, as far as I know, don’t care whether there is someone observing them through a pair of
+                    binoculars, or documenting their behavior. If a bird flaps its wings in the proverbial forest, with no birdwatcher
+                    in sight, eBird will never know. So what can we know about the birdwatchers?
+                  </p>
+                  <p class="my-3">I started by wanting to look at the data for the city of New York. And while the eBird API provides a number of
+                    ways to pull the observation data, it has its limitations. I could not easily get what I wanted - how many bird
+                    sighting checklists were submitted each day in the city of New York. I had to find a turnaround.
+                  </p>
+                  <p class="my-3">The API did allow me to ask for daily statistics for any US State, returning the number of submissions,
+                    individuals filing submissions and bird species sighted. I decided to combine the sightings for three states: New
+                    York, New Jersey and Connecticut. I reasoned that while the state of New York is geographically large, New Jersey
+                    and Connecticut are somewhat more compact and close to New York City. The combined population of the three states
+                    is about 31 million, while the Tri-State metropolitan area by different estimates contains between 20 and 23
+                    million inhabitants. And although a large number of bird sightings happen in people’s backyards, birders do travel
+                    quite a bit locally for their hobby.
+                  </p>
+                  <p class="my-3">So while an imperfect substitute, for the purpose of this exercise I believe the combined statistics for the
+                    three states should provide a reasonable reflection of what happens in and around New York City, including the
+                    effect of local weather phenomena.
+                  </p>
+   
+                  <p class="my-3">I started by looking at the submissions for the past three months. Noticing that the patterns in the number of
+                    contributors closely followed the number submissions, I decided to focus only on the number of submissions.
+                  </p>
+                </div>
+                <div class="block mx-3">
+                <iframe Daily Submitted Bird Sighting Checklists" aria-label="Column Chart"
+                  id="datawrapper-chart-bCEV7" src="https://datawrapper.dwcdn.net/bCEV7/1/" scrolling="no"
+                  frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"
+                  data-external="1"></iframe>
+                </div>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+                </script>
+                <p class="my-3">First thing that stood out was one day in May, where observations spiked. There was something special about May
+                  13th. It was, what eBird called <a href=https://ebird.org/news/global-big-day-2023>Big Day</a>, a celebration of the semiannual World Migratory Bird
+                  Day when their users are encouraged to go out and fill out a few extra submissions. What’s remarkable though, is
+                  that the number of different species spotted largely does not depend on the number of birders out that particular day, or the number of 
+                  submissions to the database. On Big Day, for example, more than twice as many submissions were made as on the next highest
+                  submissions day, 8,951 vs 4,454, but only 25 more species were spotted - 521 vs 506.
+                </p>
+                <p class="my-3">In general, the number of species stays relatively flat despite the spikes in observations. I noticed a definite
+                  pattern in the number of submissions, fluctuations defined by seven day intervals. After removing a few days to
+                  make the number of weekdays even, I averaged the number of submissions on each day of the week.
+                </p>
+                <div class="block mx-3">
+                  <iframe title="Hump Day Is Not For The Birds" aria-label="Column Chart" id="datawrapper-chart-NLKXg"
+                  src="https://datawrapper.dwcdn.net/NLKXg/2/" scrolling="no" frameborder="0"
+                  style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+                </script>
+                </div>
+                <p class="my-3">I imagine that birds do not have to report to their bosses, submit timecards and abide by deadlines, but many
+                  bird watchers definitely do. Wednesdays are the inverted hump days for the birdwatching community.
+                </p>
+                <p class="my-3">What else do birders have to contend with? How about the weather?
+                </p>
+                <p class="my-3">While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely
+                  either bring down the mood of bird watchers or force the birds to hide really well.
+                  This is where my analysis gets really shaky, because I can only get the weather for one location. But let’s assume
+                  that the population of the Tri-State area should have a sizable effect on the statistics for the three states
+                  combined. I used weatherapi.com to check the weather for New York, and averaged across the descriptive conditions
+                  for those days.
+                </p>
+                <div class="block mx-3">
+                <iframe title="Yeah, Nobody Likes Rainy Days" aria-label="Stacked Bars" id="datawrapper-chart-mab9u"
+                  src="https://datawrapper.dwcdn.net/mab9u/1/" scrolling="no" frameborder="0"
+                  style="width: 0; min-width: 100% !important; border: none;" height="433" data-external="1"></iframe>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+                </script>
+                </div>
+                <p class="my-3"> While we still see a fair amount of checklists submitted for days with light rain, thunderstorms definitely
+                  either bring down the mood of bird watchers or force the birds to hide really well.
+                </p>
+                <p class="my-3">There was a rather new phenomenon we had to contend with recently in New York, bad air days due to Canadian
+                  wildfires. Unfortunately, weatherapi.com does not provide historical air quality data, however I was able to find
+                  it at the <a href="https://aqicn.org/historical#!city:usa/newyork">World Air Quality Historical Database</a>.
+                </p>
+                <div class="block mx-3">
+                <iframe title="Air Quality in New York City" aria-label="Interactive line chart"
+                  id="datawrapper-chart-5tLgj" src="https://datawrapper.dwcdn.net/5tLgj/1/" scrolling="no"
+                  frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"
+                  data-external="1"></iframe>
+                </div>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+                </script>
+                <p class="my-3">Thankfully, there were only a few patches of bad air quality days in New York recently, but the drop in bird
+                  sighting submissions was noticeable. The numbers for bad days compared to similar days the weeks before or after
+                  were 10-20 percent lower. With only a few bad air quality days in recent memory, there is not enough data to go
+                  by, but it’s fair to guess that if we continue to suffer from bad air days in New York, the bird watching hobby
+                  will suffer along with other outdoor activities, and citizen science with it.
+                </p>
+                <p class="my-3">One last thing I wanted to look at was the effect of COVID lockdowns on eBird submissions. To do that I needed
+                  to ask the API over a thousand times to give me daily statistics for one state (I chose New York). In case I would
+                  get denied API access for overtaxing the servers, I left it for last.
+                </p>
+                <div class="block mx-3">
+                <iframe title="Effects of Covid on Bird Watching" aria-label="Interactive line chart"
+                  id="datawrapper-chart-rzhma" src="https://datawrapper.dwcdn.net/rzhma/1/" scrolling="no"
+                  frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"
+                  data-external="1"></iframe>
+                </div>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
+                </script>
+                <p class="my-3">It appears that in the spring of 2020, eBird started receiving a larger number of submissions from
+                  more participants. What’s remarkable is that those numbers have not dropped as COVID lockdowns ended.
+                  Birdwatching, it seems, is an enduring hobby.
+                </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </body>
-  </html>
+</body>
+
+</html>
